@@ -1,4 +1,4 @@
-FROM minio/minio:latest
+FROM minio/minio:RELEASE.2023-11-01T01-57-10Z-cpuv1
 
 # Add user dokku with an individual UID
 RUN useradd -ms /bin/bash dokku
