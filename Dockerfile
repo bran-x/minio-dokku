@@ -1,7 +1,7 @@
 FROM minio/minio:latest
 
 # Add user dokku with an individual UID
-RUN userad -ms /bin/bash dokku
+RUN useradd -ms /bin/bash dokku
 USER dokku
 
 # Create data directory for the user, where we will keep the data
