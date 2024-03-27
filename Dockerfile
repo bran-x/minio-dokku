@@ -1,10 +1,7 @@
-FROM minio/minio:RELEASE.2021-10-07T01-07-50Z
-
-# Install sudo package
-RUN apt-get update && apt-get install -y sudo
+FROM minio/minio:latest
 
 # Add user dokku with an individual UID
-RUN useradd -u 32769 -m -s /bin/bash dokku
+RUN userad -ms /bin/bash dokku
 USER dokku
 
 # Create data directory for the user, where we will keep the data
